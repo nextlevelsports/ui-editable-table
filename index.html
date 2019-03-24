@@ -10,12 +10,10 @@
           border: none;
           width: 100%;
           font-size: 14px;
-          padding: 2px;
-          text-align: center;
+          padding: 5px;
       }
 
-      input:hover { background-color: #eee; }
-      input:focus { background-color: #ccf; }
+      input:hover { background-color: #f7f9fa; }
 
       table {
         border-collapse: collapse;
@@ -23,14 +21,12 @@
       }
 
       td {
-          border: 1px solid #999;
+          border: 1px solid #c3cfd5;
           padding: 0;
       }
 
-      tr:first-child td input {
-          background-color: #ccc;
-          font-weight: bold;
-          text-align: center;
+      td:first-child input {
+          background-color: #f7f9fa;
           user-select: none;
       }
     </style>
@@ -40,14 +36,12 @@
       <table></table>
     </div>
     <script>
-      function getInitialData({rows, header}) {
-        const data = [
-          header
-        ];
-        const columns = data[0].length;
+      function getInitialData() {
+        const data = [];
+        const weeks = 10;
 
-        for (let i = 0; i <= rows; i++) {
-          data.push(new Array(data[0].length));
+        for (let i = 1; i <= weeks; i++) {
+          data.push(new Array(`Week ${i}`, ''));
         }
 
         return data;
@@ -68,10 +62,7 @@
 
         if (!value) {
           value = {
-            tableData : getInitialData({
-              rows: 3,
-              header: ['FOO', 'BAR', 'BAZ']
-            })
+            tableData : getInitialData()
           };
         }
 

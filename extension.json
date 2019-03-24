@@ -1,6 +1,6 @@
 {
-  "name": "Contentful UI extension table example",
-  "id": "cf-contentful-ui-table-example",
+  "name": "Season Schedule",
+  "id": "season-schedule-builder",
   "fieldTypes": ["Object"],
   "srcdoc": "./index.html"
 }
